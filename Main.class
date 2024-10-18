@@ -1,0 +1,58 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+import java.util.Scanner;
+
+public class Main {
+   public Main() {
+   }
+
+   public static void main(String[] var0) {
+      ClassroomManagementSystem var1 = new ClassroomManagementSystem();
+      Scanner var2 = new Scanner(System.in);
+
+      String var3;
+      do {
+         System.out.println("\n1. Add Student");
+         System.out.println("2. Display Students");
+         System.out.println("3. Delete Student");
+         System.out.println("4. Update Student Details");
+         System.out.println("5. Exit");
+         System.out.print("Choose an option: ");
+         switch (var2.nextLine()) {
+            case "1":
+               System.out.print("Enter student name: ");
+               String var6 = var2.nextLine();
+               System.out.print("Enter student ID: ");
+               String var7 = var2.nextLine();
+               System.out.print("Enter student hobby: ");
+               String var8 = var2.nextLine();
+               System.out.print("Enter sports played by student: ");
+               String var9 = var2.nextLine();
+               System.out.print("Enter attendance percentage: ");
+               double var10 = var2.nextDouble();
+               var2.nextLine();
+               var1.addStudent(var6, var7, var8, var9, var10);
+               break;
+            case "2":
+               var1.displayStudents();
+               break;
+            case "3":
+               System.out.print("Enter student ID to delete: ");
+               String var12 = var2.nextLine();
+               var1.deleteStudent(var12);
+               break;
+            case "4":
+               System.out.print("Enter student ID to update: ");
+               String var13 = var2.nextLine();
+               var1.updateStudent(var13);
+               break;
+            case "5":
+               System.out.println("Exiting the program.");
+               break;
+            default:
+               System.out.println("Invalid choice. Please try again.");
+         }
+      } while(!var3.equals("5"));
+
+      var2.close();
+   }
+}

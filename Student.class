@@ -1,0 +1,31 @@
+// Source code is decompiled from a .class file using FernFlower decompiler.
+class Student {
+   private String name;
+   private String studentId;
+   private String hobby;
+   private String sports;
+   private double attendancePercentage;
+
+   public Student(String var1, String var2, String var3, String var4, double var5) {
+      this.name = var1;
+      this.studentId = var2;
+      this.hobby = var3;
+      this.sports = var4;
+      this.attendancePercentage = var5;
+   }
+
+   public String toString() {
+      return "Student Name: " + this.name + ", Student ID: " + this.studentId + ", Hobby: " + this.hobby + ", Sports: " + this.sports + ", Attendance Percentage: " + this.attendancePercentage + "%";
+   }
+
+   public String getStudentId() {
+      return this.studentId;
+   }
+
+   public void updateDetails(String var1, String var2, String var3, double var4) {
+      this.name = var1;
+      this.hobby = var2;
+      this.sports = var3;
+      this.attendancePercentage = var4;
+   }
+}
